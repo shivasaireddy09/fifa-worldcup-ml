@@ -70,7 +70,7 @@ df["result"] = encoder.fit_transform(df["result"])
 
 # features (x)
 x = df[["home_team", "away_team", "tournament",
-        "city", "country", "neutral", "result"]]
+        "city", "country", "neutral",]]
 
 # Target (y)
 y = df["result"]
