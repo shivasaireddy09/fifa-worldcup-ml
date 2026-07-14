@@ -95,7 +95,9 @@ function App() {
           <option value="">🏠 Select Home Team</option>
 
           {teams.map(team => (
-            <option key={team}>{team}</option>
+            <option key={team} value={teams}>
+              {team}
+            </option>
           ))}
 
         </select>
@@ -108,7 +110,9 @@ function App() {
           <option value="">✈ Select Away Team</option>
 
           {teams.map(team => (
-            <option key={team}>{team}</option>
+            <option key={team} value={team}>
+              {team}
+            </option>
           ))}
 
         </select>
