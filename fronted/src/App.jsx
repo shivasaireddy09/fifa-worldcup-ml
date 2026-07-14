@@ -22,9 +22,11 @@ function App() {
   useEffect(() => {
     axios.get(`${API}/teams`)
       .then(res => {
-
+        console.log("Teams:",
+          res.data.teams);
         setTeams(res.data.teams);
-      });
+      })
+      .catch(err => console.log(err));
 
     axios.get(`${API}/tournaments`)
       .then(res => setTournaments(res.data.tournaments));
