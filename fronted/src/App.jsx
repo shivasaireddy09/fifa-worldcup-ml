@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-const API =
-  "https://fifa-worldcup-api-vu8n.onrender.com";
+
+const API = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
 function App() {
   const [teams, setTeams] = useState([]);
@@ -95,7 +95,7 @@ function App() {
           <option value="">🏠 Select Home Team</option>
 
           {teams.map(team => (
-            <option key={team} value={teams}>
+            <option key={team} value={team}>
               {team}
             </option>
           ))}
